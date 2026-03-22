@@ -33,7 +33,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
         <p>
           The trilogy spans three books:{' '}
           <span className="font-semibold">The Covenant</span>,{' '}
-          <span className="font-semibold">The Schizm</span>, and{' '}
+          <span className="font-semibold">The Schism</span>, and{' '}
           <span className="font-semibold">The Synthesis</span> — all words in
           this game are drawn from across the series.
         </p>
