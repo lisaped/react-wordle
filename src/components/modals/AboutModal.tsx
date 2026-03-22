@@ -40,12 +40,12 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
         <p>
           Visit{' '}
           <a
-            href="https://lisapedrosa.art"
+            href="https://lisapedrosa.com"
             target="_blank"
             rel="noopener noreferrer"
             className="underline"
           >
-            lisapedrosa.art
+            lisapedrosa.com
           </a>{' '}
           to explore more of Lisa's work.
         </p>
