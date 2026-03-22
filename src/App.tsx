@@ -280,7 +280,17 @@ function App() {
           setIsDatePickerModalOpen={setIsDatePickerModalOpen}
           setIsSettingsModalOpen={setIsSettingsModalOpen}
         />
-
+<div className="w-full bg-black text-white text-center text-sm py-2">
+  Inspired by the novel{' '}
+  
+    href="https://www.lisapedrosa.com/speciest"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="underline font-semibold hover:text-gray-300"
+  >
+    Speciest by Lisa Pedrosa →
+  </a>
+</div>
         {!isLatestGame && (
           <div className="flex items-center justify-center">
             <ClockIcon className="h-6 w-6 stroke-gray-600 dark:stroke-gray-300" />
