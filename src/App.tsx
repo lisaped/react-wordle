@@ -277,12 +277,13 @@ function App() {
   return (
     <Div100vh>
       <div className="flex h-full flex-col">
-        <Navbar
-          setIsInfoModalOpen={setIsInfoModalOpen}
-          setIsStatsModalOpen={setIsStatsModalOpen}
-          setIsDatePickerModalOpen={setIsDatePickerModalOpen}
-          setIsSettingsModalOpen={setIsSettingsModalOpen}
-        />
+<Navbar
+  setIsInfoModalOpen={setIsInfoModalOpen}
+  setIsStatsModalOpen={setIsStatsModalOpen}
+  setIsDatePickerModalOpen={setIsDatePickerModalOpen}
+  setIsSettingsModalOpen={setIsSettingsModalOpen}
+  setIsAboutModalOpen={setIsAboutModalOpen}  {/* ← ADD THIS */}
+/>
 <div className="w-full bg-stone-900 text-white text-center text-sm py-2">
   📚 Words from the <span className="italic font-semibold">Speciest</span> Trilogy ·{' '}
   
