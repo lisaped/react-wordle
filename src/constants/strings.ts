@@ -3,8 +3,9 @@ export const GAME_TITLE = 'Speciest'
 export const WIN_MESSAGES = [
   'Brilliant!',
   'You think like a Speciest!',
-  'The author approves 🎉',
-  'Sharp mind!',
+  'The Covenant would be proud!',
+  'Worthy of the Synthesis!',
+  'Sharp as a Schizm!',
 ]
 
 export const GAME_COPIED_MESSAGE = 'Game copied to clipboard'
@@ -23,3 +24,11 @@ export const TOTAL_TRIES_TEXT = 'Total tries'
 export const SUCCESS_RATE_TEXT = 'Success rate'
 export const CURRENT_STREAK_TEXT = 'Current streak'
 export const BEST_STREAK_TEXT = 'Best streak'
+
+// Required by App.tsx
+export const DISCOURAGE_INAPP_BROWSER_TEXT =
+  'To get the best experience, please open this game directly in your browser rather than within an app.'
+export const HARD_MODE_ALERT_MESSAGE =
+  'Hard mode can only be enabled at the start of a new game!'
+export const SHARE_FAILURE_TEXT =
+  'Unable to share the results of the game. Please try again.'
