@@ -111,6 +111,7 @@ function App() {
       : false
   )
 
+
   useEffect(() => {
     // if no game state on load,
     // show the user the how-to info modal
@@ -282,15 +283,24 @@ function App() {
           setIsDatePickerModalOpen={setIsDatePickerModalOpen}
           setIsSettingsModalOpen={setIsSettingsModalOpen}
         />
-<div className="w-full bg-black text-white text-center text-sm py-2">
-  Inspired by the novel{' '}
+<div className="w-full bg-stone-900 text-white text-center text-sm py-2">
+  📚 Words from the <span className="italic font-semibold">Speciest</span> Trilogy ·{' '}
+  
+    href="https://www.amazon.com/dp/B0GMPQR231"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="underline font-bold hover:text-amber-300 transition-colors"
+  >
+    Read on Kindle →
+  </a>
+  {' · '}
   
     href="https://www.lisapedrosa.com/speciest"
     target="_blank"
     rel="noopener noreferrer"
-    className="underline font-semibold hover:text-gray-300"
+    className="underline hover:text-amber-300 transition-colors"
   >
-    Speciest by Lisa Pedrosa →
+    lisapedrosa.com
   </a>
 </div>
         {!isLatestGame && (
@@ -370,6 +380,11 @@ function App() {
             handleDarkMode={handleDarkMode}
             isHighContrastMode={isHighContrastMode}
             handleHighContrastMode={handleHighContrastMode}
+            
+          />
+          <AboutModal
+            isOpen={isAboutModalOpen}
+            handleClose={() => setIsAboutModalOpen(false)}
           />
           <AlertContainer />
         </div>
