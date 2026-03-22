@@ -14,6 +14,7 @@ import { InfoModal } from './components/modals/InfoModal'
 import { MigrateStatsModal } from './components/modals/MigrateStatsModal'
 import { SettingsModal } from './components/modals/SettingsModal'
 import { StatsModal } from './components/modals/StatsModal'
+import { AboutModal } from './components/modals/AboutModal'
 import { Navbar } from './components/navbar/Navbar'
 import {
   DATE_LOCALE,
@@ -55,6 +56,7 @@ import {
 } from './lib/words'
 
 function App() {
+  const [isAboutModalOpen, setIsAboutModalOpen] = useState(false)
   const isLatestGame = getIsLatestGame()
   const gameDate = getGameDate()
   const prefersDarkMode = window.matchMedia(
