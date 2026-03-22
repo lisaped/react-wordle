@@ -1,4 +1,4 @@
-export const GAME_TITLE = 'Speciest'
+export const GAME_TITLE = 'OrdWol - Speciest Wordl Clone'
 
 export const WIN_MESSAGES = [
   'Brilliant!',
