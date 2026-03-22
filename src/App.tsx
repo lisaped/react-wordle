@@ -111,10 +111,7 @@ function App() {
       : false
   )
 
-
   useEffect(() => {
-    // if no game state on load,
-    // show the user the how-to info modal
     if (!loadGameStateFromLocalStorage(true)) {
       setTimeout(() => {
         setIsInfoModalOpen(true)
@@ -226,7 +223,6 @@ function App() {
       })
     }
 
-    // enforce hard mode - all guesses must contain all previously revealed letters
     if (isHardMode) {
       const firstMissingReveal = findFirstUnusedReveal(currentGuess, guesses)
       if (firstMissingReveal) {
@@ -238,8 +234,6 @@ function App() {
     }
 
     setIsRevealing(true)
-    // turn this back off after all
-    // chars have been revealed
     setTimeout(() => {
       setIsRevealing(false)
     }, REVEAL_TIME_MS * solution.length)
@@ -277,33 +271,34 @@ function App() {
   return (
     <Div100vh>
       <div className="flex h-full flex-col">
-<Navbar
-  setIsInfoModalOpen={setIsInfoModalOpen}
-  setIsStatsModalOpen={setIsStatsModalOpen}
-  setIsDatePickerModalOpen={setIsDatePickerModalOpen}
-  setIsSettingsModalOpen={setIsSettingsModalOpen}
-  setIsAboutModalOpen={setIsAboutModalOpen}  {/* ← ADD THIS */}
-/>
-<div className="w-full bg-stone-900 text-white text-center text-sm py-2">
-  📚 Words from the <span className="italic font-semibold">Speciest</span> Trilogy ·{' '}
-  
-    href="https://www.amazon.com/dp/B0GMPQR231"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="underline font-bold hover:text-amber-300 transition-colors"
-  >
-    Read on Kindle →
-  </a>
-  {' · '}
-  
-    href="https://www.lisapedrosa.com/speciest"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="underline hover:text-amber-300 transition-colors"
-  >
-    lisapedrosa.com
-  </a>
-</div>
+        <Navbar
+          setIsInfoModalOpen={setIsInfoModalOpen}
+          setIsStatsModalOpen={setIsStatsModalOpen}
+          setIsDatePickerModalOpen={setIsDatePickerModalOpen}
+          setIsSettingsModalOpen={setIsSettingsModalOpen}
+          setIsAboutModalOpen={setIsAboutModalOpen}
+        />
+        <div className="w-full bg-stone-900 text-white text-center text-sm py-2">
+          📚 Words from the{' '}
+          <span className="italic font-semibold">Speciest</span> Trilogy ·{' '}
+          <a
+            href="https://www.amazon.com/dp/B0GMPQR231"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline font-bold hover:text-amber-300 transition-colors"
+          >
+            Read on Kindle →
+          </a>
+          {' · '}
+          <a
+            href="https://www.lisapedrosa.com/speciest"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-amber-300 transition-colors"
+          >
+            lisapedrosa.com
+          </a>
+        </div>
         {!isLatestGame && (
           <div className="flex items-center justify-center">
             <ClockIcon className="h-6 w-6 stroke-gray-600 dark:stroke-gray-300" />
@@ -381,7 +376,6 @@ function App() {
             handleDarkMode={handleDarkMode}
             isHighContrastMode={isHighContrastMode}
             handleHighContrastMode={handleHighContrastMode}
-            
           />
           <AboutModal
             isOpen={isAboutModalOpen}
